@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us - Pathfinder Counseling</title>
+    <style>
+        /* Additional CSS specific to this page */
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .contact-container h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .contact-details {
+            margin-top: 40px;
+        }
+
+        .contact-details h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .contact-info {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="ai.html">AI Counseling</a></li>
+                <li><a href="aptitude.html">Aptitude Testing</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, please feel free to reach out to us. We're here to help!</p>
+            
+            <!-- Contact Details -->
+            <div class="contact-details">
+                <h3>Contact Information</h3>
+                <p>Address: 123 Main Street, Cityville, State 12345</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@pathfindercounseling.com</p>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Contact Form</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2023 Pathfinder Counseling
+    </footer>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <script>
+        // Initialize the Dialogflow Chatbot Widget
+        window.dfMessenger = {
+            initChatbot: function () {
+                const chatbotConfig = {
+                    projectId: 'bot-9kvj',  // Replace with your Dialogflow Project ID
+                    languageCode: 'en-US',  // Set the desired language code
+                };
+    
+                // Open the chatbot when the "Get Started" button is clicked
+                document.getElementById('openChatbot').addEventListener('click', function () {
+                    window.dfMessenger.openChatbot(chatbotConfig);
+                });
+            }
+        };
+    </script>
+</body>
+</html>
